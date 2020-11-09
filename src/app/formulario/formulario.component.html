@@ -1,0 +1,119 @@
+
+<form [formGroup]="trabajadorForm" (ngSubmit)="processForm()" id="cover">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" formControlName = "nombre" class="form-control" id="nombre" name="nombre" placeholder="Ingrese Nombre" [ngClass]="{ 'is-invalid': enviado && f.nombre.errors }">
+      <div *ngIf="enviado && f.nombre.errors" class="invalid-feedback">
+        <div *ngIf="f.nombre.errors.required">Nombre es requerido</div>
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col">
+        <label for="ci">C.I.</label>
+        <input type="text" formControlName = "ci" class="form-control" id="ci" name="ci" placeholder="Ingrese C.I." [ngClass]="{ 'is-invalid': enviado && f.ci.errors }">
+        <div *ngIf="enviado && f.ci.errors" class="invalid-feedback">
+            <div *ngIf="f.ci.errors.required">C.I. es requerido</div>
+        </div>
+    </div>
+    <div class="form-group col">
+        <label for="nroEmpleado">Nro. Empleado</label>
+        <input type="text" formControlName = "nroEmpleado" class="form-control" id="nroEmpleado" name="nroEmpleado" placeholder="Ingrese Nro. Empleado" [ngClass]="{ 'is-invalid': enviado && f.nroEmpleado.errors }">
+        <div *ngIf="enviado && f.nroEmpleado.errors" class="invalid-feedback">
+            <div *ngIf="f.nroEmpleado.errors.required">Nro. Empleado es requerido</div>
+        </div>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col">
+        <label for="areaTrabajo">Area de Trabajo</label>
+        <input type="text" formControlName = "areaTrabajo" class="form-control" id="areaTrabajo" name="areaTrabajo" placeholder="Ingrese Area de Trabajo" [ngClass]="{ 'is-invalid': enviado && f.areaTrabajo.errors }">
+        <div *ngIf="enviado && f.areaTrabajo.errors" class="invalid-feedback">
+            <div *ngIf="f.areaTrabajo.errors.required">Area de Trabajo es requerido</div>
+        </div>
+    </div>
+    <div class="form-group col">
+        <label for="profesion">Profesion</label>
+        <input type="text" formControlName = "profesion" class="form-control" id="profesion" name="profesion" placeholder="Ingrese Profesion" [ngClass]="{ 'is-invalid': enviado && f.profesion.errors }">
+        <div *ngIf="enviado && f.profesion.errors" class="invalid-feedback">
+            <div *ngIf="f.profesion.errors.required">Profesion es requerido</div>
+        </div>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col">
+        <label for="salarioHora">Salario Hora (bs)</label>
+        <input type="text" formControlName = "salarioHora" class="form-control" id="salarioHora" name="salarioHora" placeholder="Ingrese Salario Hora" [ngClass]="{ 'is-invalid': enviado && f.salarioHora.errors }">
+        <div *ngIf="enviado && f.salarioHora.errors" class="invalid-feedback">
+            <div *ngIf="f.salarioHora.errors.required">Salario Hora es requerido</div>
+        </div>
+    </div>
+    <div class="form-group col">
+        <label for="salarioMes">Salario Mes (bs)</label>
+        <input type="text" formControlName = "salarioMes" class="form-control" id="salarioMes" name="salarioMes" placeholder="Ingrese Salario Mes" [ngClass]="{ 'is-invalid': enviado && f.salarioMes.errors }">
+        <div *ngIf="enviado && f.salarioMes.errors" class="invalid-feedback">
+            <div *ngIf="f.salarioMes.errors.required">Salario Mes es requerido</div>
+        </div>
+    </div>
+    </div>
+
+    <hr>
+
+    <div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="tipoSangre">Tipo de Sangre</label>
+        <input type="text" formControlName = "tipoSangre" class="form-control" id="tipoSangre" name="tipoSangre" placeholder="Ingrese Tipo de Sangre" [ngClass]="{ 'is-invalid': enviado && f.tipoSangre.errors }">
+        <div *ngIf="enviado && f.tipoSangre.errors" class="invalid-feedback">
+            <div *ngIf="f.tipoSangre.errors.required">Tipo Sangre es requerido</div>
+        </div>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="estatura">Estatura (cm)</label>
+        <input type="text" formControlName = "estatura" class="form-control" id="estatura" name="estatura" placeholder="Ingrese Estatura" [ngClass]="{ 'is-invalid': enviado && f.estatura.errors }">
+        <div *ngIf="enviado && f.estatura.errors" class="invalid-feedback">
+            <div *ngIf="f.estatura.errors.required">Estatura es requerido</div>
+        </div>
+    </div>
+    <div class="form-group col-md-4">
+        <label for="peso">Peso (kg)</label>
+        <input type="text" formControlName = "peso" class="form-control" id="peso" name="peso" placeholder="Ingrese Peso" [ngClass]="{ 'is-invalid': enviado && f.peso.errors }">
+        <div *ngIf="enviado && f.peso.errors" class="invalid-feedback">
+            <div *ngIf="f.peso.errors.required">Peso es requerido</div>
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="enfermedadesBase">Enfermedades de Base</label>
+        <input type="text" formControlName = "enfermedadesBase" class="form-control" id="enfermedadesBase" name="enfermedadesBase" placeholder="Ingrese Enfermedades de Base" [ngClass]="{ 'is-invalid': enviado && f.enfermedadesBase.errors }">
+        <div *ngIf="enviado && f.enfermedadesBase.errors" class="invalid-feedback">
+            <div *ngIf="f.enfermedadesBase.errors.required">Enfermedades de Base es requerido</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="form-row">
+    <div class="form-group col">
+      <label for="email">Email</label>
+      <input type="text" formControlName = "email" class="form-control" id="email" name="email" placeholder="Ingrese Email" [ngClass]="{ 'is-invalid': enviado && f.email.errors }">
+      <div *ngIf="enviado && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email es requerido</div>
+      </div>
+    </div>
+    <div class="form-group col">
+        <label for="telefono">Telefono</label>
+        <input type="text" formControlName = "telefono" class="form-control" id="telefono" name="telefono" placeholder="Ingrese Telefono" [ngClass]="{ 'is-invalid': enviado && f.telefono.errors }">
+        <div *ngIf="enviado && f.telefono.errors" class="invalid-feedback">
+            <div *ngIf="f.telefono.errors.required">Telefono es requerido</div>
+        </div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <input type="text" formControlName = "mensaje" class="form-control" id="mensaje" name="mensaje" placeholder="Ingrese Mensaje" [ngClass]="{ 'is-invalid': enviado && f.mensaje.errors }">
+        <div *ngIf="enviado && f.mensaje.errors" class="invalid-feedback">
+            <div *ngIf="f.mensaje.errors.required">Mensaje es requerido</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
